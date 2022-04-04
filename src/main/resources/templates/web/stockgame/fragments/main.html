@@ -3,14 +3,15 @@
 <head>
   <meta charSet="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="shortcut icon" th:href="@{/web/stockgame/img/favicon.ico}" href="https://www.chotot.com/chotot-img/favicon.ico"/>
+  <link rel="shortcut icon" th:href="@{/web/stockgame/img/favicon.ico}"
+        href="https://www.chotot.com/chotot-img/favicon.ico"/>
   <link rel="stylesheet" th:href="@{/web/stockgame/css/header.css}"
         href="https://static.chotot.com/storage/APP_WRAPPER/production/3.0.34/desktop/header.css"/>
   <link rel="stylesheet" th:href="@{/web/stockgame/css/63178ad27790075ae898.css}" data-n-g=""
         href="https://static.chotot.com/storage/NEXT_UNIFY_PRODUCTION/ac83b5d1/_next/static/css/63178ad27790075ae898.css"/>
-  <link rel="stylesheet" th:href="@{/web/stockgame/css/98860068d9a55a52aa91.css}"  data-n-p=""
+  <link rel="stylesheet" th:href="@{/web/stockgame/css/98860068d9a55a52aa91.css}" data-n-p=""
         href="https://static.chotot.com/storage/NEXT_UNIFY_PRODUCTION/ac83b5d1/_next/static/css/98860068d9a55a52aa91.css"/>
-  <link rel="stylesheet"  th:href="@{/web/stockgame/css/b1d77895ce12340d9776.css}" data-n-p=""
+  <link rel="stylesheet" th:href="@{/web/stockgame/css/b1d77895ce12340d9776.css}" data-n-p=""
         href="https://static.chotot.com/storage/NEXT_UNIFY_PRODUCTION/ac83b5d1/_next/static/css/b1d77895ce12340d9776.css"/>
   <script type="text/javascript" th:src="@{webjars/bootstrap/4.2.1/js/bootstrap.min.js}"></script>
 </head>
@@ -20,10 +21,12 @@
   <div th:fragment="main" style="position:relative">
     <div></div>
     <div id="placeholder-app-wrapper" class="placeholder-app-wrapper false false">
-      <div class="first false"><a class="link-app-wrapper  false"><img class="logo-app-wrapper  false"
-                                                                       src="https://static.chotot.com/storage/default/nha_white_logo.webp"
-                                                                       alt="Chợ Tốt"/></a></div>
-      <div class="first false"><input class="input-app-wrapper  false" placeholder="Tìm kiếm trên Chợ Tốt"/></div>
+      <div class="first false"><a class="link-app-wrapper  false" th:href="@{/web/stockgame}">
+        <img class="logo-app-wrapper  false"
+             th:href="@{/web/stockgame/img/nha_white_logo.webp}"
+             src="https://static.chotot.com/storage/default/nha_white_logo.webp"
+             alt="Stock Game"/></a></div>
+      <div class="first false"><input class="input-app-wrapper  false" placeholder="search room 2 play"/></div>
     </div>
     <div class="container">
       <div class="ct-detail adview">

@@ -17,8 +17,8 @@
 
 <body>
 <div th:fragment="default" class="col-md-4">
-  RIGHT BLOCK
-  <div class="d-lg-block d-none">
+
+  <div class="d-lg-block d-none" style="margin:10px 0px 30px">
     <div class="SellerProfile_profileWrapper__4g7O2 " itemprop="seller" itemscope=""
          itemtype="http://schema.org/Person">
       <a class="SellerProfile_sellerWrapper__3NSgn" target="_blank"
@@ -59,28 +59,28 @@
       </div>
     </div>
   </div>
-  RIGHT BLOCK
+
   <hr/>
-  <div class="LeadButton_wrapperLeadButtonDesktop__13fEA">
+  <div class="LeadButton_wrapperLeadButtonDesktop__13fEA" style="margin:10px 0px 30px">
     <div class="LeadButton_chatDesktopButton__2E3nh"><a
-        href="/hvdangApp/web/stockgame" rel="nofollow"
+        th:href="@{/web/stockgame/createRoom}" rel="nofollow"
         class="btn LeadButton_buttonChatDesktop__30BBf"><img
         src="https://static.chotot.com.vn/storage/chotot-icons/png/chat_green.png" alt="chat"><span
-        class="text-success"><span>ACTION 123</span></span></a></div>
+        class="text-success"><span>create Room</span></span></a></div>
     <div class="LeadButton_chatDesktopButton__2E3nh"><a
-        href="/hvdangApp/web/stockgame" rel="nofollow"
+        th:href="@{/web/stockgame/joinPlayer}" rel="nofollow"
         class="btn LeadButton_buttonChatDesktop__30BBf"><img
         src="https://static.chotot.com.vn/storage/chotot-icons/png/chat_green.png" alt="chat"><span
-        class="text-success"><span>ACTION 123</span></span></a></div>
+        class="text-success"><span>add Player</span></span></a></div>
     <div class="LeadButton_chatDesktopButton__2E3nh"><a
-        href="/hvdangApp/web/stockgame" rel="nofollow"
+        th:href="@{/web/stockgame/playStock}" rel="nofollow"
         class="btn LeadButton_buttonChatDesktop__30BBf"><img
         src="https://static.chotot.com.vn/storage/chotot-icons/png/chat_green.png" alt="chat"><span
-        class="text-success"><span>ACTION 123</span></span></a></div>
+        class="text-success"><span>buy/sell Stocks</span></span></a></div>
   </div>
-  RIGHT BLOCK
+
   <hr/>
-  <div class="d-lg-block d-none">
+  <div class="d-lg-block d-none" style="margin:10px 0px 30px">
     <div>
       <div class="SafeTips_SafeTipsWrapper__p_8H5">
         <img alt="safe tips" class="pull-left"
@@ -92,10 +92,7 @@
           ❤️</p></div>
       </div>
     </div>
-
   </div>
-  <hr/>
-  RIGHT BLOCK
 </div>
 </body>
 </html>
