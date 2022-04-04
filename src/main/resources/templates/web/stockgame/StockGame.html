@@ -19,5 +19,13 @@
 
 <body>
 <div th:replace="web/stockgame/fragments/main :: main">&copy; 2016 The Static Templates</div>
+
+<div style="display: none;">
+  <div th:fragment="operations" class="col-md-8">
+    <div th:replace="web/stockgame/fragments/left :: demo">
+      Stock Game operations
+    </div>
+  </div>
+</div>
 </body>
 </html>

@@ -16,22 +16,30 @@ public class StockGameController {
 
   @GetMapping({"", "/"})
   public String mainPage(Model model) {
-    return String.format("%s/%s", CONTEXT_VIEW, "StockGame"); //view
+    String view = String.format("%s/%s", CONTEXT_VIEW, "StockGame");
+    model.addAttribute("view", view);
+    return view;
   }
 
   @GetMapping({"/createRoom"})
   public String createRoom(Model model) {
-    return String.format("%s/%s", CONTEXT_VIEW, "createRoom"); //view
+    String view = String.format("%s/%s", CONTEXT_VIEW, "createRoom");
+    model.addAttribute("view", view);
+    return view;
   }
 
   @GetMapping({"/joinPlayer"})
   public String joinPlayer(Model model) {
-    return String.format("%s/%s", CONTEXT_VIEW, "joinPlayer"); //view
+    String view = String.format("%s/%s", CONTEXT_VIEW, "joinPlayer");
+    model.addAttribute("view", view);
+    return view;
   }
 
   @GetMapping({"/playStock"})
   public String playStock(Model model) {
-    return String.format("%s/%s", CONTEXT_VIEW, "playStock"); //view
+    String view = String.format("%s/%s", CONTEXT_VIEW, "playStock");
+    model.addAttribute("view", view);
+    return view;
   }
 
 }
