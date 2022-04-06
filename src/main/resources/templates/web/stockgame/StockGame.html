@@ -21,9 +21,28 @@
 <div th:replace="web/stockgame/fragments/main :: main">&copy; 2016 The Static Templates</div>
 
 <div style="display: none;">
-  <div th:fragment="operations" class="col-md-8">
-    <div th:replace="web/stockgame/fragments/left :: demo">
-      Stock Game operations
+  <div th:fragment="operations">
+    <div th:replace="web/stockgame/StockGame :: gameInfo">
+      Game Info
+    </div>
+    <div th:replace="web/stockgame/StockGame :: playersInfo">
+      Players Info
+    </div>
+  </div>
+</div>
+
+<div style="display: none;">
+  <div th:fragment="gameInfo">
+    <div th:replace="web/stockgame/fragments/left :: gameInfo">
+      Game Info
+    </div>
+  </div>
+</div>
+
+<div style="display: none;">
+  <div th:fragment="playersInfo">
+    <div th:replace="web/stockgame/fragments/left :: playersInfo">
+      Game Info
     </div>
   </div>
 </div>
