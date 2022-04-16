@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>join Player</title>
+
+  <meta charSet="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="shortcut icon" th:href="@{/web/stockgame/img/favicon.ico}"/>
+  <link rel="stylesheet" th:href="@{/web/stockgame/css/header.css}"
+        href="https://static.chotot.com/storage/APP_WRAPPER/production/3.0.34/desktop/header.css"/>
+  <link rel="stylesheet" th:href="@{/web/stockgame/css/63178ad27790075ae898.css}" data-n-g=""
+        href="https://static.chotot.com/storage/NEXT_UNIFY_PRODUCTION/ac83b5d1/_next/static/css/63178ad27790075ae898.css"/>
+  <link rel="stylesheet" th:href="@{/web/stockgame/css/98860068d9a55a52aa91.css}"  data-n-p=""
+        href="https://static.chotot.com/storage/NEXT_UNIFY_PRODUCTION/ac83b5d1/_next/static/css/98860068d9a55a52aa91.css"/>
+  <link rel="stylesheet"  th:href="@{/web/stockgame/css/b1d77895ce12340d9776.css}" data-n-p=""
+        href="https://static.chotot.com/storage/NEXT_UNIFY_PRODUCTION/ac83b5d1/_next/static/css/b1d77895ce12340d9776.css"/>
+  <link th:rel="stylesheet" th:href="@{webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
+  <script type="text/javascript" th:src="@{webjars/bootstrap/4.2.1/js/bootstrap.min.js}"></script>
+</head>
+
+<body>
+<div th:replace="web/stockgame/fragments/main :: main">&copy; 2016 The Static Templates</div>
+
+<div style="display: none;">
+  <div th:fragment="operations" class="col-md-8">
+    <div style="margin-top:2em">
+      <div th:replace="web/stockgame/addPlayer :: addPlayer">
+        add Player
+      </div>
+    </div>
+    <div style="margin-top:2em">
+      <div th:replace="web/stockgame/addPlayer :: playersInfo">
+        Players Info
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--<div style="display: none;">-->
+<div>
+  <div th:fragment="addPlayer">
+    <form action="#" th:action="@{/web/stockgame/addPlayer}" th:object="${form}"
+          method="post">
+      <fieldset>
+        <input type="submit" id="submitButton" th:value="Save">
+        <input type="reset" id="resetButton" name="reset" th:value="Reset"/>
+        <table>
+          <thead>
+          <tr>
+            <th> Title</th>
+            <th> Author</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr th:each="book, itemStat : *{books}">
+            <td><input th:field="*{books[__${itemStat.index}__].title}" /></td>
+            <td><input th:field="*{books[__${itemStat.index}__].author}" /></td>
+          </tr>
+          </tbody>
+        </table>
+      </fieldset>
+    </form>
+  </div>
+</div>
+
+<!--<div style="display: none;">-->
+<div>
+  <div th:fragment="playersInfo">
+    <h4>Players Info</h4>
+    <div style="text-align:right"><span style="text-align:right">(Don vi: 1.000.000 VND)</span></div>
+    <div class="col-xs-12 no-padding">
+      <div></div>
+      <hr/>
+      <div class="no-padding AdParam_adParamItem__1o-dd" data-testid="param-item">
+        <div class="AdParam_adMediaParam__3bzmC">
+          <div class="media-left media-top">
+            <img class="AdParam_adParamIcon__1W6qJ"
+                 th:src="@{/web/stockgame/img/default_avatar.webp}"
+                 src="https://static.chotot.com/storage/default_images/default-avatar.webp">
+          </div>
+          <div class="media-body media-middle">
+            <div>
+            <span><span style="padding-right:2em">Tommy |</span>
+            <span style="padding-right:2em">Von Ban Dau: 100 |</span>
+            <span style="padding-right:2em">Tai San: 120 |</span>
+            <span style="padding-right:2em">Loi Nhuan: 20%</span></span>
+            </div>
+            <hr/>
+            <div th:replace="web/stockgame/addPlayer :: stockAsset">
+              stock asset
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr/>
+      <div class="no-padding AdParam_adParamItem__1o-dd" data-testid="param-item">
+        <div class="AdParam_adMediaParam__3bzmC">
+          <div class="media-left media-top">
+            <img class="AdParam_adParamIcon__1W6qJ"
+                 th:src="@{/web/stockgame/img/default_avatar.webp}"
+                 src="https://static.chotot.com/storage/default_images/default-avatar.webp">
+          </div>
+          <div class="media-body media-middle">
+            <div>
+            <span><span style="padding-right:2em">Janny |</span>
+            <span style="padding-right:2em">Von Ban Dau: 100 |</span>
+            <span style="padding-right:2em">Tai San: 150 |</span>
+            <span style="padding-right:2em">Loi Nhuan: 50%</span></span>
+            </div>
+            <hr/>
+            <div>
+              <img th:src="@{/web/stockgame/img/runway.png}"
+                   src="https://static.chotot.com/storage/default/nha_white_logo.webp"/>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr/>
+      <div class="no-padding AdParam_adParamItem__1o-dd" data-testid="param-item">
+        <div class="AdParam_adMediaParam__3bzmC">
+          <div class="media-left media-top">
+            <img class="AdParam_adParamIcon__1W6qJ"
+                 th:src="@{/web/stockgame/img/default_avatar.webp}"
+                 src="https://static.chotot.com/storage/default_images/default-avatar.webp">
+          </div>
+          <div class="media-body media-middle">
+            <div>
+            <span><span style="padding-right:2em">David |</span>
+            <span style="padding-right:2em">Von Ban Dau: 100 |</span>
+            <span style="padding-right:2em">Tai San: 70 |</span>
+            <span style="padding-right:2em">Loi Nhuan: -30%</span></span>
+            </div>
+            <hr/>
+            <div>
+              <img th:src="@{/web/stockgame/img/runway.png}"
+                   src="https://static.chotot.com/storage/default/nha_white_logo.webp"/>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div></div>
+    </div>
+  </div>
+</div>
+
+<!--<div style="display: none;">-->
+<div>
+  <div th:fragment="stockAsset">
+    <table>
+      <thead>
+      <tr>
+        <th> Title </th>
+        <th> Author </th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr th:if="${books.empty}">
+        <td colspan="2"> No Books Available </td>
+      </tr>
+      <tr th:each="book : ${books}">
+        <td><span th:text="${book.title}"> Title </span></td>
+        <td><span th:text="${book.author}"> Author </span></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+</body>
+</html>

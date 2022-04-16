@@ -21,19 +21,25 @@
 <div th:replace="web/stockgame/fragments/main :: main">&copy; 2016 The Static Templates</div>
 
 <div style="display: none;">
-  <div th:fragment="operations">
-    <div th:replace="web/stockgame/StockGame :: gameInfo">
-      Game Info
+<!--<div>-->
+  <div class="col-md-8" th:fragment="operations">
+    <div style="margin-top:2em">
+      <div th:replace="web/stockgame/StockGame :: gameInfo">
+        Game Info
+      </div>
     </div>
-    <div th:replace="web/stockgame/StockGame :: playersInfo">
-      Players Info
+    <hr/>
+    <div style="margin-top:2em">
+      <div th:replace="web/stockgame/StockGame :: playersInfo">
+        Players Info
+      </div>
     </div>
   </div>
 </div>
 
 <div style="display: none;">
   <div th:fragment="gameInfo">
-    <div th:replace="web/stockgame/fragments/left :: gameInfo">
+    <div th:replace="web/stockgame/createGame :: gameInfo">
       Game Info
     </div>
   </div>
@@ -41,8 +47,8 @@
 
 <div style="display: none;">
   <div th:fragment="playersInfo">
-    <div th:replace="web/stockgame/fragments/left :: playersInfo">
-      Game Info
+    <div th:replace="web/stockgame/addPlayer :: playersInfo">
+      Players Info
     </div>
   </div>
 </div>
